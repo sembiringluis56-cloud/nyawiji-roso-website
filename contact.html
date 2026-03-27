@@ -26,7 +26,90 @@ main { min-height: 80vh; padding: 100px 20px; text-align: center; background: #1
 @keyframes fadeIn { to { opacity: 0.8; } }
 footer{ background:#1e2a47; color:white; padding:40px 20px; display:flex; justify-content:space-between; align-items:center; }
 @media(max-width:768px){ .coming-soon { font-size: 2.5rem; } footer { flex-direction:column; text-align:center; gap: 15px;} }
-</style>
+</style> .contact-info
+   .contact-actions {
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards 1.2s;
+}
+
+.wa-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #25D366;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.wa-btn:hover {
+    background: #1ebe5d;
+    transform: translateY(-2px);
+}
+
+.contact-form {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 400px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards 1.4s;
+}
+
+.contact-form h3 {
+    margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #ffcc70;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #ffb347;
+}
+
+.contact-info p {
+    <div class="contact-actions">
+    <a href="https://wa.me/6285830395032" target="_blank" class="wa-btn">
+        💬 Chat WhatsApp
+    </a>
+</div>
+
+<div class="contact-form">
+    <h3>Hubungi Kami</h3>
+    <form onsubmit="kirimPesan(event)">
+        <input type="text" placeholder="Nama kamu..." required>
+        <input type="email" placeholder="Email kamu..." required>
+        <textarea placeholder="Tulis pesan..." required></textarea>
+        <button type="submit">Kirim Pesan</button>
+    </form>
+</div>
+    margin: 5px 0;
+    letter-spacing: 1px;
+}
 </head>
 <body>
 <header class="navbar">
@@ -38,9 +121,19 @@ footer{ background:#1e2a47; color:white; padding:40px 20px; display:flex; justif
 </header>
 <main>
     <h1 class="coming-soon">COMING SOON</h1>
-    <p class="sub-text">Halaman website dalam kondisi pengerjaan agar dapat memberikan komunikasi terbaik untuk customer tercintahhh .</p>
+    <p class="sub-text"><div class="contact-info">
+    <p>📞 085830395032</p>
+    <p>📧 digitalberkarya5@gmail.com</p>
+</div>
 </main>
 <footer><p>by team digital_berkarya</p><p>Nyawiji Roso © 2026</p></footer>
 <script>function toggleMenu(){ document.getElementById("menuDropdown").classList.toggle("show"); }</script>
 </body>
-</html>
+</html>\
+
+<script>
+function kirimPesan(e){
+    e.preventDefault();
+    alert("Pesan berhasil dikirim! (demo)");
+}
+</script>
